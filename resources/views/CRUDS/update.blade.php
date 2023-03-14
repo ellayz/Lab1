@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Registration Form</title>
+    <title>Updates Form</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -31,18 +31,18 @@
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Registration Form</h2>
+                    <h2 class="title">UPDATE FORM</h2>
                     @if (session()->has('message'))
                         {{session('message')}}
                     @endif
                     
-                    <form action="/getstarted" method="POST">
+                    <form action="/updates1/{{$data2->id}}" method="POST">
                     @csrf
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Modelname</label>
-                                    <input class="input--style-4" type="text" name="Modelname">
+                                    <label class="label">ModelName</label>
+                                    <input class="input--style-4" type="text" name="Modelname" value="{{$data2->Modelname}}">
                                     @error('Modelname')
                                         {{$message}}
                                     @enderror
@@ -50,8 +50,8 @@
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">description</label>
-                                    <input class="input--style-4" type="text" name="Description">
+                                    <label class="label">Description</label>
+                                    <input class="input--style-4" type="text" name="Description" value="{{$data2->Description}}">
                                     @error('Description')
                                         {{$message}}
                                     @enderror
@@ -59,8 +59,8 @@
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">directory</label>
-                                    <input class="input--style-4" type="text" name="Directory">
+                                    <label class="label">Directory</label>
+                                    <input class="input--style-4" type="text" name="Directory" value="{{$data2->Directory}}">
                                     @error('Directory')
                                         {{$message}}
                                     @enderror
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                            <button class="btn btn--radius-2 btn--blue" type="updates">UPDATES</button>
                         </div>
                     </form>
                 </div>

@@ -14,6 +14,7 @@ class CreateModelsTable extends Migration
     public function up()
     {
         Schema::create('models', function (Blueprint $table) {
+            $table->id();
             $table->string('Modelname');
             $table->longText('Description');
             $table->string('Directory');
